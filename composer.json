@@ -1,0 +1,6 @@
+{
+    "name": "maid/mpti",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.18"
+    }
+}

@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  transition: width 600ms ease;
+  background-color: #175794;
+  z-index: 10;
+}
+.navbar-nav {
+  list-style: none;
+  height: 100vh;
+  width: 100%;
+  /* border: 1px solid salmon; */
+}
+.navbar-nav li:last-child {
+  margin-top: auto;
+}
+.logo {
+  background-color: #175794;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo i {
+  color: white;
+  padding: 7px;
+  font-size: 35px;
+}
+.logo-text {
+  display: inline;
+  position: absolute;
+  padding: 10px;
+  color: white;
+  height: 100px;
+  left: -160px;
+  text-transform: uppercase;
+  transition: left 500ms ease;
+}
+.arrow-nav {
+  margin-left: 0px;
+  transform: rotate(0deg);
+  transition: transform 500ms, margin-left 500ms;
+}
+.nav-profile {
+  border-top: 2px solid salmon;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+.user-pic {
+  padding: 7px;
+}
+.user-pic img {
+  width: 45px;
+  height: 45px;
+  margin-left: -8px;
+  border-radius: 50%;
+}
+.text-profile {
+  display: none;
+  flex: 1;
+  color: white;
+  margin-left: 10%;
+  font-family: sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+.name span {
+  font-size: 15px;
+}
+.tag-user span {
+  font-size: 13px;
+}
+.status span {
+  display: flex;
+  color: green;
+  font-size: 11px;
+}
+.status span::after {
+  margin-left: 5px;
+  margin-top: -14px;
+  font-size: 30px;
+  content: "\2022";
+}
+.nav-link {
+  text-decoration: none;
+  display: flex;
+  color: white;
+  /* padding: 20px; */
+}
+.link-text {
+  display: none;
+  color: white;
+  opacity: 0;
+  margin-left: 25%;
+  transition: display 0s, opacity 0.5s linier;
+}
+.nav-link i {
+  font-size: 25px;
+  color: white;
+}
+.nav-link img {
+  width: 35px;
+  height: 35px;
+}
+.nav-item {
+  width: 100%;
+  padding: 17px;
+}
+.nav-item:hover {
+  background: #216bb1;
+}
+.dropdown {
+  margin-top: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  border-radius: 3px;
+  right: 5px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  border-bottom: 3px solid salmon;
+}
+
+/* Dropdown Submenu pada navigasi */
+.dropdown-submenu {
+  position: relative;
+  cursor: pointer;
+}
+.dropdown-content-submenu {
+  display: none;
+  position: block;
+  margin-bottom: 5px;
+  padding-left: 35%;
+}
+.dropdown-content-submenu .link-submenu {
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.dropdown-content-submenu .link-submenu:hover {
+  /* background-color: #f1f1f1; */
+  border-left: 3px solid salmon;
+  opacity: 1;
+}
+.dropdown-submenu:hover .dropdown-content-submenu {
+  display: block;
+}
+
+.content-midle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-wrapper {
+  max-height: 500px;
+  overflow: auto;
+  display: inline-block;
+}
+.change-pic {
+  position: absolute;
+  right: 25px;
+  bottom: 50px;
+  cursor: pointer;
+}
+.border-1 {
+  border: 1px solid black;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 3rem;
+  }
+
+  .logo,
+  .nav-profile {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+  .nav-item {
+    padding: 5px;
+  }
+  .nav-link {
+    justify-content: center;
+    height: 3rem;
+  }
+  .nav-link i {
+    margin: 0;
+    font-size: 25px;
+  }
+  .navbar-nav li:last-child {
+    margin-top: 0px;
+  }
+  .change-pic {
+    right: 55%;
+  }
+}
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 4rem;
+    height: 100vh;
+  }
+  .navbar:hover {
+    width: 15rem;
+  }
+  .navbar:hover .link-text,
+  .navbar:hover .text-profile {
+    display: inline;
+    opacity: 1;
+  }
+  .navbar:hover .logo-text {
+    left: 0px;
+  }
+  .navbar:hover .arrow-nav {
+    margin-left: 150px;
+    transform: rotate(180deg);
+    transition: margin-left 500ms;
+  }
+}
