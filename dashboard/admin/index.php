@@ -75,7 +75,7 @@ function rupiah($angka)
             <li class="nav-item">
                 <a href="?page=income" class="nav-link disabled">
                     <i class="fa fa-money"></i>
-                    <span class="link-text">Income</span>
+                    <span class="link-text">Keuangan</span>
                 </a>
             </li>
             <li class="nav-item dropdown-submenu">
@@ -85,14 +85,13 @@ function rupiah($angka)
                 </a>
                 <div class="dropdown-content-submenu">
                     <a href="?page=datsiswa" class="link-submenu">Data</a>
-                    <a href="?page=datsiswa&sub=import" class="link-submenu">Import Data</a>
                     <a href="?page=datsiswa&sub=report" class="link-submenu">Report</a>
                 </div>
             </li>
             <li class="nav-item">
                 <a href="?page=invoice" class="nav-link" id="history">
                     <i class="fas fa-receipt"></i>
-                    <span class="link-text">Invoice</span>
+                    <span class="link-text">Tagihan</span>
                 </a>
             </li>
             <!-- <li class="nav-item">
