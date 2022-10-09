@@ -57,7 +57,7 @@ function rupiah($angka)
                 <div class="user-pic">
                     <img src="../../assets/icons/EPP.png" alt="">
                 </div>
-                    <span class="link-text">E - PESANTREN PAYMENT</span>
+                    <span class="link-text">E - PAYMENT PESANTREN</span>
             </li>
             <li class="nav-profile">
                 <div class="user-pic">
